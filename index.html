@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenangan Manis</title>
+    <title>Bestie • Forever Friends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,27 +16,22 @@
         }
 
         :root {
-            --primary-pink: #ff9a9e;
-            --secondary-pink: #fad0c4;
-            --soft-peach: #ffecd2;
-            --love-red: #ff6b6b;
-            --romantic-purple: #a18cd1;
-            --sunset-orange: #fbc2eb;
-            --soft-lavender: #e0c3fc;
-            --warm-yellow: #ffdde1;
-            --baby-blue: #a1c4fd;
-            --glass-effect: rgba(255, 255, 255, 0.2);
-            --shadow-soft: 0 15px 35px rgba(255, 107, 107, 0.2);
-            --gradient-sunset: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 100%);
-            --gradient-romance: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
-            --gradient-heart: linear-gradient(45deg, #ff6b6b, #fbc2eb, #a18cd1);
+            --soft-pink: #ffd1dc;
+            --medium-pink: #ffb6c1;
+            --love-red: #ff6b8b;
+            --romantic-purple: #c4a1ff;
+            --soft-lavender: #e2d1ff;
+            --warm-yellow: #fff3d1;
+            --baby-blue: #b5e4ff;
+            --glass-effect: rgba(255, 255, 255, 0.3);
+            --shadow-soft: 0 15px 35px rgba(255, 107, 139, 0.15);
         }
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe9f4 50%, #f8f0ff 100%);
+            background: linear-gradient(135deg, #fff9fb 0%, #fff4f7 50%, #fff0f5 100%);
             font-family: 'Quicksand', sans-serif;
-            color: #4a4a4a;
+            color: #5a4e5a;
             overflow-x: hidden;
             position: relative;
         }
@@ -54,26 +49,16 @@
 
         .heart {
             position: absolute;
-            color: rgba(255, 107, 107, 0.1);
+            color: rgba(255, 107, 139, 0.15);
             font-size: 20px;
-            animation: floatHeart 15s infinite linear;
+            animation: floatHeart 20s infinite linear;
         }
 
         @keyframes floatHeart {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            20% {
-                opacity: 0.5;
-            }
-            80% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.6; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
         /* Soft Blur Circles */
@@ -88,7 +73,7 @@
         .circle-1 {
             width: 400px;
             height: 400px;
-            background: rgba(255, 154, 158, 0.2);
+            background: rgba(255, 209, 220, 0.3);
             top: -100px;
             left: -100px;
         }
@@ -96,7 +81,7 @@
         .circle-2 {
             width: 500px;
             height: 500px;
-            background: rgba(161, 196, 253, 0.15);
+            background: rgba(196, 161, 255, 0.2);
             bottom: -200px;
             right: -100px;
             animation-delay: -2s;
@@ -105,7 +90,7 @@
         .circle-3 {
             width: 300px;
             height: 300px;
-            background: rgba(251, 194, 235, 0.2);
+            background: rgba(255, 243, 209, 0.3);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -113,14 +98,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.8;
-            }
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
         }
 
         /* Container */
@@ -132,7 +111,7 @@
             z-index: 2;
         }
 
-        /* Header with Glassmorphism */
+        /* Header */
         header {
             padding: 1.5rem 5%;
             position: fixed;
@@ -173,10 +152,10 @@
         }
 
         .logo-text {
-            font-family: 'Dancing Script', cursive;
-            font-weight: 700;
-            font-size: 2rem;
-            background: var(--gradient-heart);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #ff6b8b, #c4a1ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -189,7 +168,7 @@
         }
 
         nav a {
-            color: #ff6b6b;
+            color: #ff6b8b;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
@@ -198,18 +177,18 @@
         }
 
         nav a:hover {
-            color: #a18cd1;
+            color: #c4a1ff;
         }
 
         nav a::after {
-            content: '❤️';
+            content: '💕';
             position: absolute;
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
             transition: all 0.3s ease;
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
 
         nav a:hover::after {
@@ -217,7 +196,7 @@
             opacity: 1;
         }
 
-        /* Hero Section - Bucin Banget */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -230,11 +209,11 @@
         }
 
         .hero h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ff6b6b, #a18cd1, #fbc2eb);
+            background: linear-gradient(135deg, #ff6b8b, #c4a1ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -243,21 +222,21 @@
         }
 
         @keyframes glowText {
-            0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.3)); }
-            50% { filter: drop-shadow(0 0 20px rgba(161, 140, 209, 0.5)); }
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 107, 139, 0.3)); }
+            50% { filter: drop-shadow(0 0 20px rgba(196, 161, 255, 0.5)); }
         }
 
         .hero p {
             font-size: 1.3rem;
             max-width: 700px;
             margin-bottom: 2.5rem;
-            color: #6b4e71;
-            background: rgba(255, 255, 255, 0.3);
+            color: #6b5e6b;
+            background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5px);
             padding: 1.5rem 2.5rem;
             border-radius: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(255, 107, 139, 0.1);
         }
 
         .cta-button {
@@ -265,23 +244,23 @@
             align-items: center;
             gap: 15px;
             padding: 1.2rem 3rem;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            color: #4a4a4a;
+            background: linear-gradient(45deg, #ffb6c1, #e2d1ff);
+            color: #5a4e5a;
             border: none;
             border-radius: 60px;
             font-weight: 600;
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 139, 0.2);
             text-decoration: none;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.3);
             gap: 20px;
         }
 
@@ -297,17 +276,18 @@
 
         /* Gallery Section */
         .section-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
             text-align: center;
             margin: 4rem 0 3rem;
             position: relative;
-            color: #ff6b6b;
+            color: #ff6b8b;
         }
 
         .section-title::before,
         .section-title::after {
-            content: '🌸';
+            content: '💕';
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -316,11 +296,11 @@
         }
 
         .section-title::before {
-            left: 30%;
+            left: 25%;
         }
 
         .section-title::after {
-            right: 30%;
+            right: 25%;
         }
 
         .gallery-container {
@@ -331,18 +311,18 @@
         }
 
         .photo-card {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(10px);
             border-radius: 30px;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 15px 35px rgba(255, 107, 139, 0.1);
             position: relative;
         }
 
         .photo-card::before {
-            content: '❤️';
+            content: '💕';
             position: absolute;
             top: -10px;
             right: -10px;
@@ -361,8 +341,8 @@
 
         .photo-card:hover {
             transform: translateY(-15px) rotate(1deg);
-            box-shadow: 0 30px 50px rgba(255, 107, 107, 0.3);
-            border-color: rgba(255, 107, 107, 0.3);
+            box-shadow: 0 30px 50px rgba(255, 107, 139, 0.2);
+            border-color: rgba(255, 107, 139, 0.3);
         }
 
         .photo-img {
@@ -370,24 +350,25 @@
             height: 250px;
             object-fit: cover;
             transition: all 0.5s ease;
-            border-bottom: 3px solid rgba(255, 107, 107, 0.3);
+            border-bottom: 3px solid rgba(255, 107, 139, 0.2);
         }
 
         .photo-card:hover .photo-img {
             transform: scale(1.1);
-            border-bottom-color: #ff6b6b;
+            border-bottom-color: #ff6b8b;
         }
 
         .photo-info {
             padding: 1.8rem;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.6);
         }
 
         .photo-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
-            color: #ff6b6b;
+            color: #ff6b8b;
         }
 
         .photo-date {
@@ -404,12 +385,12 @@
         }
 
         .photo-desc {
-            color: #6b4e71;
+            color: #6b5e6b;
             font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        /* Music Player - Romantis */
+        /* Music Player - FIXED! */
         .music-player-container {
             position: fixed;
             bottom: 30px;
@@ -422,21 +403,23 @@
         }
 
         .music-player {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
             border-radius: 30px;
             padding: 20px;
-            width: 250px;
-            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            width: 280px;
+            box-shadow: 0 15px 35px rgba(255, 107, 139, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.5s ease;
+            display: none;
         }
 
         .music-player.active {
             transform: translateY(0);
             opacity: 1;
+            display: block;
         }
 
         .player-info {
@@ -445,9 +428,10 @@
         }
 
         .song-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.3rem;
-            color: #ff6b6b;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ff6b8b;
             margin-bottom: 5px;
         }
 
@@ -468,7 +452,7 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #ff9a9e, #fbc2eb);
+            background: linear-gradient(45deg, #ffb6c1, #e2d1ff);
             border: none;
             color: white;
             font-size: 1rem;
@@ -477,18 +461,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
         }
 
         .player-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 25px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 0 25px rgba(255, 107, 139, 0.5);
         }
 
         .progress-container {
             width: 100%;
             height: 5px;
-            background: rgba(255, 107, 107, 0.1);
+            background: rgba(255, 107, 139, 0.1);
             border-radius: 10px;
             cursor: pointer;
             overflow: hidden;
@@ -497,7 +481,7 @@
 
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #ff9a9e, #fbc2eb);
+            background: linear-gradient(90deg, #ffb6c1, #c4a1ff);
             width: 0%;
             transition: width 0.1s linear;
             border-radius: 10px;
@@ -514,7 +498,7 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #ff6b6b, #fbc2eb);
+            background: linear-gradient(45deg, #ff6b8b, #c4a1ff);
             border: none;
             color: white;
             font-size: 1.3rem;
@@ -523,7 +507,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 10px 25px rgba(255, 107, 139, 0.3);
             animation: float 3s ease-in-out infinite;
         }
 
@@ -532,7 +516,7 @@
             50% { transform: translateY(-5px); }
         }
 
-        /* WhatsApp Buttons - Estetik */
+        /* WhatsApp Buttons */
         .whatsapp-container {
             position: fixed;
             bottom: 30px;
@@ -547,7 +531,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ff9a9e, #fbc2eb);
+            background: linear-gradient(135deg, #ffb6c1, #e2d1ff);
             border: 2px solid white;
             color: white;
             font-size: 1.3rem;
@@ -556,24 +540,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 107, 139, 0.2);
             position: relative;
         }
 
         .whatsapp-btn.channel {
-            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            background: linear-gradient(135deg, #c4a1ff, #e2d1ff);
         }
 
         .whatsapp-btn:hover {
             transform: scale(1.15) rotate(5deg);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 10px 30px rgba(255, 107, 139, 0.3);
         }
 
         .tooltip {
             position: absolute;
             left: 60px;
             background: white;
-            color: #ff6b6b;
+            color: #ff6b8b;
             padding: 8px 15px;
             border-radius: 30px;
             font-size: 0.85rem;
@@ -583,7 +567,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             font-weight: 600;
-            border: 1px solid #ff9a9e;
+            border: 1px solid #ffb6c1;
         }
 
         .whatsapp-btn:hover .tooltip {
@@ -592,7 +576,7 @@
             left: 70px;
         }
 
-        /* Modal - Romantis */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -600,7 +584,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 235, 240, 0.9);
+            background: rgba(255, 245, 250, 0.9);
             backdrop-filter: blur(10px);
             z-index: 1000;
             justify-content: center;
@@ -615,25 +599,19 @@
             max-width: 80%;
             max-height: 80%;
             position: relative;
-            animation: zoomInRomance 0.5s ease;
+            animation: zoomIn 0.5s ease;
         }
 
-        @keyframes zoomInRomance {
-            from {
-                transform: scale(0.8) rotate(-5deg);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1) rotate(0);
-                opacity: 1;
-            }
+        @keyframes zoomIn {
+            from { transform: scale(0.8) rotate(-2deg); opacity: 0; }
+            to { transform: scale(1) rotate(0); opacity: 1; }
         }
 
         .modal-img {
             width: 100%;
             height: auto;
             border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 30px 60px rgba(255, 107, 139, 0.2);
             border: 5px solid white;
         }
 
@@ -643,7 +621,7 @@
             right: 0;
             background: none;
             border: none;
-            color: #ff6b6b;
+            color: #ff6b8b;
             font-size: 3rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -651,7 +629,7 @@
 
         .modal-close:hover {
             transform: rotate(180deg);
-            color: #a18cd1;
+            color: #c4a1ff;
         }
 
         .modal-info {
@@ -660,28 +638,29 @@
             left: 0;
             width: 100%;
             text-align: center;
-            color: #ff6b6b;
+            color: #ff6b8b;
             background: white;
             padding: 1.5rem;
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid #ff9a9e;
+            border: 1px solid #ffb6c1;
         }
 
         /* Footer */
         footer {
             margin-top: 8rem;
             padding: 4rem 5%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
             text-align: center;
         }
 
         .footer-logo {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, #ff6b6b, #a18cd1);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, #ff6b8b, #c4a1ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -689,7 +668,7 @@
         }
 
         .footer-text {
-            color: #6b4e71;
+            color: #6b5e6b;
             max-width: 600px;
             margin: 0 auto 2rem;
             font-size: 1.1rem;
@@ -710,16 +689,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ff6b6b;
+            color: #ff6b8b;
             font-size: 1.3rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.1);
         }
 
         .social-icon:hover {
             transform: translateY(-5px) scale(1.1);
-            background: linear-gradient(135deg, #ff9a9e, #fbc2eb);
+            background: linear-gradient(135deg, #ffb6c1, #e2d1ff);
             color: white;
         }
 
@@ -727,76 +706,38 @@
             color: #a18cd1;
             font-size: 0.95rem;
             padding-top: 2rem;
-            border-top: 2px dashed rgba(255, 107, 107, 0.3);
+            border-top: 2px dashed rgba(255, 107, 139, 0.2);
         }
 
-        /* Scroll Progress - Pita Cinta */
+        /* Scroll Progress */
         .scroll-progress {
             position: fixed;
             top: 0;
             left: 0;
             height: 4px;
-            background: linear-gradient(90deg, #ff9a9e, #fbc2eb, #a18cd1);
+            background: linear-gradient(90deg, #ffb6c1, #c4a1ff);
             z-index: 1001;
             transition: width 0.3s ease;
-            box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+            box-shadow: 0 0 15px rgba(255, 107, 139, 0.3);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-                padding: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-title::before,
-            .section-title::after {
-                display: none;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            nav a {
-                font-size: 0.9rem;
-            }
-            
-            .music-player {
-                width: 220px;
-            }
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.1rem; padding: 1.2rem; }
+            .section-title { font-size: 2.2rem; }
+            .section-title::before, .section-title::after { display: none; }
+            nav ul { gap: 1rem; }
+            nav a { font-size: 0.9rem; }
+            .music-player { width: 250px; }
         }
 
         @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .gallery-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .music-player {
-                width: 200px;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            .gallery-container { grid-template-columns: 1fr; }
+            .music-player { width: 220px; }
         }
     </style>
 </head>
@@ -816,20 +757,20 @@
     <div class="whatsapp-container">
         <button class="whatsapp-btn" id="whatsappNumberBtn">
             <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">Chat dengan aku 🤭</span>
+            <span class="tooltip">Chat bestie 💕</span>
         </button>
         <button class="whatsapp-btn channel" id="whatsappChannelBtn">
             <i class="fas fa-heart"></i>
-            <span class="tooltip">Channel spesial 🌸</span>
+            <span class="tooltip">Group bestie 🌸</span>
         </button>
     </div>
 
-    <!-- Music Player -->
+    <!-- Music Player (FIXED!) -->
     <div class="music-player-container">
         <div class="music-player" id="musicPlayer">
             <div class="player-info">
-                <div class="song-title" id="songTitle">Kisah Kita</div>
-                <div class="song-artist" id="songArtist">Untuk Kamu ❤️</div>
+                <div class="song-title" id="songTitle">Best Friend</div>
+                <div class="song-artist" id="songArtist">For You 💕</div>
             </div>
             <div class="player-controls">
                 <button class="player-btn" id="playPauseBtn">
@@ -846,7 +787,12 @@
                 <span id="currentTime">0:00</span>
                 <span id="duration">0:00</span>
             </div>
-            <audio id="audioPlayer" preload="auto"></audio>
+            <!-- Audio element dengan sumber yang benar -->
+            <audio id="audioPlayer" preload="auto" loop>
+                <!-- Ganti src dengan file musik kamu -->
+                <source src="best-friend-song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
         <button class="music-toggle-btn" id="musicToggleBtn">
             <i class="fas fa-music"></i>
@@ -860,14 +806,14 @@
                 <div class="logo-icon">
                     <i class="fas fa-heart"></i>
                 </div>
-                <div class="logo-text">BucinStory</div>
+                <div class="logo-text">Bestie Forever</div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#gallery">Kenangan</a></li>
-                    <li><a href="#about">Cerita</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Bestie's Gallery</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -877,28 +823,27 @@
     <main class="container">
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <h1>Cerita Cinta Kita</h1>
-            <p>Setiap momen bersamamu adalah lukisan indah yang takkan pernah pudar. Kumpulan kenangan manis yang selalu membuat hati ini berdebar. 🌸</p>
+            <h1>My Best Friend</h1>
+            <p>Thank you for always being there through ups and downs, for all the laughter and tears we've shared. You're not just a friend, you're family. 💕</p>
             <a href="#gallery" class="cta-button">
-                <i class="fas fa-heart"></i> Lihat Kenangan Kita
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i> Our Memories <i class="fas fa-heart"></i>
             </a>
         </section>
 
         <!-- Gallery Section -->
         <section id="gallery">
-            <h2 class="section-title">Kenangan Manis</h2>
+            <h2 class="section-title">Sweet Memories</h2>
             <div class="gallery-container" id="galleryContainer"></div>
         </section>
 
         <!-- About Section -->
         <section id="about" style="margin-top: 6rem; padding: 3rem 0;">
-            <h2 class="section-title">Cerita Kita</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); padding: 3rem; border-radius: 60px; border: 1px solid rgba(255, 255, 255, 0.5);">
-                <p style="font-size: 1.3rem; color: #6b4e71; margin-bottom: 1.5rem; font-family: 'Dancing Script', cursive; line-height: 1.8;">
-                    "Dari pertama bertemu, hati ini sudah tahu. Setiap tawa, setiap cerita, setiap momen bersamamu adalah hadiah terindah. Terima kasih telah menjadi bagian dari kisah hidupku."
+            <h2 class="section-title">Our Journey</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); padding: 3rem; border-radius: 60px; border: 1px solid rgba(255, 255, 255, 0.7);">
+                <p style="font-size: 1.3rem; color: #6b5e6b; margin-bottom: 1.5rem; line-height: 1.8;">
+                    "Best friends are the people in your life that make you laugh a little louder, smile a little brighter, and live a little better. Thank you for being mine."
                 </p>
-                <i class="fas fa-heart" style="color: #ff6b6b; font-size: 2rem; animation: heartbeat 1.5s infinite;"></i>
+                <i class="fas fa-heart" style="color: #ff6b8b; font-size: 2rem; animation: heartbeat 1.5s infinite;"></i>
             </div>
         </section>
     </main>
@@ -909,7 +854,7 @@
         <div class="modal-content">
             <img id="modalImage" src="" alt="" class="modal-img">
             <div class="modal-info">
-                <h3 id="modalTitle" style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; margin-bottom: 0.5rem;"></h3>
+                <h3 id="modalTitle" style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem;"></h3>
                 <p id="modalDesc" style="color: #a18cd1;"></p>
             </div>
         </div>
@@ -918,8 +863,8 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
-            <div class="footer-logo">BucinStory</div>
-            <p class="footer-text">Untuk kamu yang selalu ada di setiap detak jantung ini. Semoga kenangan ini selalu membuatmu tersenyum. 🌸</p>
+            <div class="footer-logo">Bestie Forever</div>
+            <p class="footer-text">To my best friend: thanks for all the late night talks, spontaneous adventures, and for being my number one supporter. I love you, bestie! 🌸</p>
             <div class="social-icons">
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -927,44 +872,44 @@
                 <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
             </div>
             <div class="copyright">
-                ❤️ Dibuat dengan cinta untuk kamu yang spesial ❤️
+                💕 Made with love for my best friend 💕
             </div>
         </div>
     </footer>
 
     <script>
-        // Photo Data - Lebih Bucin
+        // Photo Data - Best Friend Edition
         const photoData = [
-            { id: 1, title: "Pertama Bertemu", date: "21 Desember 2025", desc: "Hari pertama kita bertemu, deg-degan banget!", img: "anime1.jpg" },
-            { id: 2, title: "Jalan Bareng", date: "22 April 2025", desc: "Jalan-jalan sore, senyummu bikin hati meleleh.", img: "anime2.jpg" },
-            { id: 3, title: "Malam Mingguan", date: "21 Desember 2025", desc: "Malam minggu pertama kita, romantis banget!", img: "anime3.jpg" },
-            { id: 4, title: "Foto Bareng", date: "21 Desember 2025", desc: "Foto pertama kita berdua, bakal kusimpan selamanya.", img: "anime4.jpg" },
-            { id: 5, title: "Kencan Rahasia", date: "21 Desember 2025", desc: "Kencan kecil-kecilan, seru banget!", img: "anime5.jpg" },
-            { id: 6, title: "Main Bareng", date: "12 Agustus 2025", desc: "Main game bareng, kamu selalu menangin aku.", img: "anime6.jpg" },
-            { id: 7, title: "Sunset Romantis", date: "3 September 2025", desc: "Nonton sunset bareng, cantik banget pemandangannya.", img: "anime7.jpg" },
-            { id: 8, title: "Makan Malam", date: "19 September 2025", desc: "Makan malam spesial, makanan jadi lebih enak karna kamu.", img: "anime8.jpg" },
-            { id: 9, title: "Kejutan Spesial", date: "5 Oktober 2025", desc: "Kejutan kecil buat kamu, seneng liat reaksinya!", img: "anime9.jpg" },
-            { id: 10, title: "Foto Lucu", date: "21 Oktober 2025", desc: "Foto lucu-lucuan, ketawa terus.", img: "anime10.jpg" },
-            { id: 11, title: "Jalan-jalan", date: "2 November 2025", desc: "Jalan-jalan santai, ngobrolin apa aja.", img: "anime11.jpg" },
-            { id: 12, title: "Nongkrong", date: "15 November 2025", desc: "Nongkrong di kafe favorit kita.", img: "anime12.jpg" },
-            { id: 13, title: "Selfie Bareng", date: "28 November 2025", desc: "Selfie abis-abisan, hasilnya lucu semua.", img: "anime13.jpg" },
-            { id: 14, title: "Ulang Tahun", date: "10 Desember 2025", desc: "Rayain ultah kamu, spesial banget!", img: "anime14.jpg" },
-            { id: 15, title: "Tahun Baruan", date: "31 Desember 2025", desc: "Tahun baruan pertama kita, kembang apinya indah.", img: "anime15.jpg" },
-            { id: 16, title: "Jalan Malam", date: "14 Januari 2025", desc: "Jalan-jalan malam, lampu kota romantis.", img: "anime16.jpg" },
-            { id: 17, title: "Belajar Bareng", date: "27 Januari 2025", desc: "Belajar bareng, kamu jadi guru yang baik.", img: "anime17.jpg" },
-            { id: 18, title: "Kejutan Spesial", date: "8 Februari 2025", desc: "Kejutan manis buat kamu.", img: "anime18.jpg" },
-            { id: 19, title: "Konser Musik", date: "22 Februari 2025", desc: "Nonton konser bareng, asik banget!", img: "anime19.jpg" },
-            { id: 20, title: "Piknik", date: "7 Maret 2025", desc: "Piknik kecil-kecilan, seru banget!", img: "anime20.jpg" },
-            { id: 21, title: "Di Taman", date: "18 Maret 2024", desc: "Duduk di taman, ngobrolin masa depan.", img: "anime21.jpg" },
-            { id: 22, title: "Masak Bareng", date: "2 April 2024", desc: "Masak bareng, walau gosep tapi happy.", img: "anime22.jpg" },
-            { id: 23, title: "Matahari Terbit", date: "15 April 2025", desc: "Nonton sunrise, indah banget pemandangannya.", img: "anime23.jpg" },
-            { id: 24, title: "Naik Perahu", date: "21 Febuari 2026", desc: "Naik perahu, airnya jernih banget.", img: "anime24.jpg" },
-            { id: 25, title: "Bermain Salju", date: "21 Febuari 2026", desc: "Main salju pertama kita, dingin tapi seru!", img: "anime25.jpg" },
-            { id: 26, title: "Mendaki", date: "23 Mei 2026", desc: "Mendaki bareng, capek tapi pemandangan indah.", img: "anime26.jpg" },
-            { id: 27, title: "Api Unggun", date: "5 Juni 2026", desc: "Duduk di dekat api unggun, hangat dan romantis.", img: "anime27.jpg" },
-            { id: 28, title: "Kota Tua", date: "18 Juni 2024", desc: "Jalan-jalan di kota tua, banyak spot foto keren.", img: "anime28.jpg" },
-            { id: 29, title: "Foto Kreatif", date: "1 Juli 2024", desc: "Foto-foto kreatif, hasilnya aesthetic banget.", img: "anime29.jpg" },
-            { id: 30, title: "Kenangan Terakhir", date: "15 Juli 2024", desc: "Kenangan terakhir sebelum kita pisah sementara.", img: "anime30.jpg" }
+            { id: 1, title: "First Time Meeting", date: "21 Dec 2025", desc: "The day we first met, and I knew we'd be friends forever!", img: "anime1.jpg" },
+            { id: 2, title: "Hanging Out", date: "22 Apr 2025", desc: "Just chilling together, talking about everything and nothing.", img: "anime2.jpg" },
+            { id: 3, title: "Weekend Fun", date: "21 Dec 2025", desc: "Our first weekend hangout, so much fun!", img: "anime3.jpg" },
+            { id: 4, title: "Group Picture", date: "21 Dec 2025", desc: "Our first picture together, gonna keep this forever.", img: "anime4.jpg" },
+            { id: 5, title: "Secret Adventure", date: "21 Dec 2025", desc: "That one time we went on a random adventure!", img: "anime5.jpg" },
+            { id: 6, title: "Game Night", date: "12 Aug 2025", desc: "Playing games together, you always win lol.", img: "anime6.jpg" },
+            { id: 7, title: "Sunset Views", date: "3 Sep 2025", desc: "Watching the sunset together, so beautiful.", img: "anime7.jpg" },
+            { id: 8, title: "Dinner Date", date: "19 Sep 2025", desc: "Our dinner hangout, food tastes better with you.", img: "anime8.jpg" },
+            { id: 9, title: "Surprise!", date: "5 Oct 2025", desc: "A little surprise for you, your reaction was priceless!", img: "anime9.jpg" },
+            { id: 10, title: "Funny Faces", date: "21 Oct 2025", desc: "Making silly faces, laughing nonstop.", img: "anime10.jpg" },
+            { id: 11, title: "Walk in the Park", date: "2 Nov 2025", desc: "Just walking and talking about life.", img: "anime11.jpg" },
+            { id: 12, title: "Cafe Hopping", date: "15 Nov 2025", desc: "Trying out new cafes together.", img: "anime12.jpg" },
+            { id: 13, title: "Selfie Time", date: "28 Nov 2025", desc: "Taking endless selfies, all of them are cute.", img: "anime13.jpg" },
+            { id: 14, title: "Birthday Bash", date: "10 Dec 2025", desc: "Celebrating your birthday, so special!", img: "anime14.jpg" },
+            { id: 15, title: "New Year's Eve", date: "31 Dec 2025", desc: "Our first New Year together, fireworks were amazing.", img: "anime15.jpg" },
+            { id: 16, title: "Night Walk", date: "14 Jan 2025", desc: "Walking at night, city lights were romantic.", img: "anime16.jpg" },
+            { id: 17, title: "Study Session", date: "27 Jan 2025", desc: "Studying together, you're such a good teacher.", img: "anime17.jpg" },
+            { id: 18, title: "Sweet Surprise", date: "8 Feb 2025", desc: "A sweet surprise just for you.", img: "anime18.jpg" },
+            { id: 19, title: "Concert Vibes", date: "22 Feb 2025", desc: "Watching a concert together, so much fun!", img: "anime19.jpg" },
+            { id: 20, title: "Picnic Day", date: "7 Mar 2025", desc: "A little picnic, simple but fun!", img: "anime20.jpg" },
+            { id: 21, title: "At the Park", date: "18 Mar 2024", desc: "Sitting in the park, talking about our future.", img: "anime21.jpg" },
+            { id: 22, title: "Cooking Together", date: "2 Apr 2024", desc: "Cooking together, burnt it but still happy!", img: "anime22.jpg" },
+            { id: 23, title: "Sunrise Watch", date: "15 Apr 2025", desc: "Watching the sunrise, so beautiful.", img: "anime23.jpg" },
+            { id: 24, title: "Boat Ride", date: "21 Feb 2026", desc: "Taking a boat ride, the water was so clear.", img: "anime24.jpg" },
+            { id: 25, title: "Snow Day", date: "21 Feb 2026", desc: "Our first snow day, cold but fun!", img: "anime25.jpg" },
+            { id: 26, title: "Hiking Trip", date: "23 May 2026", desc: "Hiking together, tired but the view was worth it.", img: "anime26.jpg" },
+            { id: 27, title: "Bonfire Night", date: "5 Jun 2026", desc: "Sitting by the bonfire, warm and cozy.", img: "anime27.jpg" },
+            { id: 28, title: "Old Town", date: "18 Jun 2024", desc: "Exploring the old town, so many cool photo spots.", img: "anime28.jpg" },
+            { id: 29, title: "Creative Shots", date: "1 Jul 2024", desc: "Taking creative photos, so aesthetic.", img: "anime29.jpg" },
+            { id: 30, title: "Last Memory", date: "15 Jul 2024", desc: "Our last memory before we parted for a bit.", img: "anime30.jpg" }
         ];
 
         // WhatsApp Data
@@ -973,11 +918,11 @@
             channel: "https://whatsapp.com/channel/0029Vb6EXzn9Gv7NRopIph0t"
         };
 
-        // Music Data
+        // Music Data - FIXED!
         const musicData = {
-            title: "MUSIC",
-            artist: "me and you",
-            src: "cartoon-jeja-on-on-lyrics-feat-daniel-levi-128-ytshorts.savetube.me.mp3"
+            title: "Best Friend Song",
+            artist: "For My Bestie 💕",
+            src: "music.mp3" // GANTI DENGAN NAMA FILE MP3 KAMU!
         };
 
         // Generate Gallery
@@ -1006,7 +951,7 @@
         for (let i = 0; i < 30; i++) {
             const heart = document.createElement('div');
             heart.className = 'heart';
-            heart.innerHTML = '❤️';
+            heart.innerHTML = '💕';
             heart.style.left = Math.random() * 100 + '%';
             heart.style.animationDuration = 10 + Math.random() * 20 + 's';
             heart.style.animationDelay = Math.random() * 5 + 's';
@@ -1014,7 +959,7 @@
             heartsContainer.appendChild(heart);
         }
 
-        // Music Player
+        // ================== MUSIC PLAYER FIX ==================
         const audio = document.getElementById('audioPlayer');
         const playPauseBtn = document.getElementById('playPauseBtn');
         const playPauseIcon = document.getElementById('playPauseIcon');
@@ -1027,54 +972,83 @@
         const musicToggleBtn = document.getElementById('musicToggleBtn');
         const musicPlayer = document.getElementById('musicPlayer');
 
+        // Set sumber audio
         audio.src = musicData.src;
         document.getElementById('songTitle').textContent = musicData.title;
         document.getElementById('songArtist').textContent = musicData.artist;
 
+        // State variables
         let isPlaying = false;
         let isMuted = false;
         let isPlayerVisible = false;
 
-        playPauseBtn.addEventListener('click', () => {
+        // Play/Pause button
+        playPauseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             if (isPlaying) {
                 audio.pause();
                 playPauseIcon.classList.remove('fa-pause');
                 playPauseIcon.classList.add('fa-play');
                 musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
             } else {
-                audio.play();
-                playPauseIcon.classList.remove('fa-play');
-                playPauseIcon.classList.add('fa-pause');
-                musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                // Coba play dengan user interaction
+                audio.play().then(() => {
+                    playPauseIcon.classList.remove('fa-play');
+                    playPauseIcon.classList.add('fa-pause');
+                    musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log('Playback failed:', error);
+                    alert('Click anywhere on the page first to enable audio!');
+                });
             }
             isPlaying = !isPlaying;
         });
 
-        volumeBtn.addEventListener('click', () => {
+        // Volume button
+        volumeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             isMuted = !isMuted;
             audio.muted = isMuted;
-            volumeIcon.classList.toggle('fa-volume-up');
-            volumeIcon.classList.toggle('fa-volume-mute');
+            volumeIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
         });
 
+        // Update progress bar
         audio.addEventListener('timeupdate', () => {
-            const percent = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = percent + '%';
-            currentTimeEl.textContent = formatTime(audio.currentTime);
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = percent + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
         });
 
+        // Metadata loaded
         audio.addEventListener('loadedmetadata', () => {
             durationEl.textContent = formatTime(audio.duration);
         });
 
+        // Click on progress bar to seek
         progressContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
             const width = progressContainer.clientWidth;
             const clickX = e.offsetX;
             const duration = audio.duration;
-            audio.currentTime = (clickX / width) * duration;
+            if (duration) {
+                audio.currentTime = (clickX / width) * duration;
+            }
         });
 
-        musicToggleBtn.addEventListener('click', () => {
+        // Auto play when audio ends (loop)
+        audio.addEventListener('ended', () => {
+            audio.currentTime = 0;
+            if (isPlaying) {
+                audio.play();
+            }
+        });
+
+        // Toggle music player visibility
+        musicToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             isPlayerVisible = !isPlayerVisible;
             if (isPlayerVisible) {
                 musicPlayer.classList.add('active');
@@ -1083,9 +1057,17 @@
             }
         });
 
+        // Format time helper
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return "0:00";
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
         // WhatsApp Buttons
         document.getElementById('whatsappNumberBtn').addEventListener('click', () => {
-            window.open(`https://wa.me/${whatsappData.number}?text=Halo%20aku%20liat%20website%20kenangan%20kamu%20`, '_blank');
+            window.open(`https://wa.me/${whatsappData.number}?text=Halo%20bestie!%20Aku%20liat%20website%20kenangan%20kita%20💕`, '_blank');
         });
 
         document.getElementById('whatsappChannelBtn').addEventListener('click', () => {
@@ -1131,17 +1113,21 @@
             }
         });
 
-        function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        // Auto show music player
+        // Auto show music player after 2 seconds
         setTimeout(() => {
             musicPlayer.classList.add('active');
             isPlayerVisible = true;
         }, 2000);
+
+        // Handle audio autoplay policy (browsers block autoplay)
+        // This ensures audio can play after user interaction
+        document.body.addEventListener('click', function initAudio() {
+            if (!isPlaying && audio.paused) {
+                // Just initialize, don't autoplay
+                console.log('Audio initialized');
+            }
+            document.body.removeEventListener('click', initAudio);
+        }, { once: true });
     </script>
 </body>
 </html>
