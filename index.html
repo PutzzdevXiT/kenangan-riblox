@@ -319,6 +319,7 @@
             border: 1px solid rgba(255, 255, 255, 0.7);
             box-shadow: 0 15px 35px rgba(255, 107, 139, 0.1);
             position: relative;
+            cursor: pointer;
         }
 
         .photo-card::before {
@@ -354,7 +355,7 @@
         }
 
         .photo-card:hover .photo-img {
-            transform: scale(1.1);
+            transform: scale(1.05);
             border-bottom-color: #ff6b8b;
         }
 
@@ -390,7 +391,7 @@
             line-height: 1.6;
         }
 
-        /* Music Player - FIXED UNTUK GITHUB! */
+        /* Music Player */
         .music-player-container {
             position: fixed;
             bottom: 30px;
@@ -765,7 +766,7 @@
         </button>
     </div>
 
-    <!-- Music Player (FIXED UNTUK GITHUB!) -->
+    <!-- Music Player -->
     <div class="music-player-container">
         <div class="music-player" id="musicPlayer">
             <div class="player-info">
@@ -787,7 +788,6 @@
                 <span id="currentTime">0:00</span>
                 <span id="duration">0:00</span>
             </div>
-            <!-- AUDIO ELEMENT - PASTIKAN NAMA FILE SESUAI! -->
             <audio id="audioPlayer" preload="auto" loop>
                 <source src="music.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
@@ -877,7 +877,7 @@
     </footer>
 
     <script>
-        // Photo Data - Best Friend Edition
+        // ======================== PHOTO DATA (DIREVISI, MENGGUNAKAN NAMA FILE ASLI anime1.jpg - anime31.jpg) ========================
         const photoData = [
             { id: 1, title: "First Time Meeting", date: "21 Dec 2025", desc: "The day we first met, and I knew we'd be friends forever!", img: "anime1.jpg" },
             { id: 2, title: "Hanging Out", date: "22 Apr 2025", desc: "Just chilling together, talking about everything and nothing.", img: "anime2.jpg" },
@@ -905,11 +905,11 @@
             { id: 24, title: "Boat Ride", date: "21 Feb 2026", desc: "Taking a boat ride, the water was so clear.", img: "anime24.jpg" },
             { id: 25, title: "Snow Day", date: "21 Feb 2026", desc: "Our first snow day, cold but fun!", img: "anime25.jpg" },
             { id: 26, title: "Hiking Trip", date: "23 May 2026", desc: "Hiking together, tired but the view was worth it.", img: "anime26.jpg" },
-            { id: 27, title: "Bonfire Night", date: "11 april 2026", desc: "Sitting by the bonfire, warm and cozy.", img: "anime27.jpg" },
-            { id: 28, title: "Old Town", date: "11 april 2026", desc: "Exploring the old town, so many cool photo spots.", img: "anime28.jpg" },
-            { id: 29, title: "Creative Shots", date: "11 april 2026", desc: "Taking creative photos, so aesthetic.", img: "anime29.jpg" },
-            { id: 30, title: "Last Memory", date: "11 april 2026*", desc: "Our last memory before we parted for a bit.", img: "anime30.jpg" }
-            { id: 31, title: "Last Memory", date: "11 april 2026*", desc: "Our last memory before we parted for a bit.", img: "anime31.jpg" }
+            { id: 27, title: "Bonfire Night", date: "11 Apr 2026", desc: "Sitting by the bonfire, warm and cozy.", img: "anime27.jpg" },
+            { id: 28, title: "Old Town", date: "11 Apr 2026", desc: "Exploring the old town, so many cool photo spots.", img: "anime28.jpg" },
+            { id: 29, title: "Creative Shots", date: "11 Apr 2026", desc: "Taking creative photos, so aesthetic.", img: "anime29.jpg" },
+            { id: 30, title: "Last Memory", date: "11 Apr 2026", desc: "Our last memory before we parted for a bit.", img: "anime30.jpg" },
+            { id: 31, title: "Forever Friends", date: "12 Apr 2026", desc: "Best friends forever, no matter the distance.", img: "anime31.jpg" }
         ];
 
         // WhatsApp Data
@@ -924,10 +924,11 @@
         photoData.forEach((photo, index) => {
             const card = document.createElement('div');
             card.className = 'photo-card';
-            card.style.animationDelay = `${index * 0.1}s`;
+            card.style.animationDelay = `${index * 0.05}s`;
+            card.setAttribute('data-id', photo.id);
             
             card.innerHTML = `
-                <img src="${photo.img}" alt="${photo.title}" class="photo-img">
+                <img src="${photo.img}" alt="${photo.title}" class="photo-img" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x250?text=Gambar+Tidak+Ditemukan';">
                 <div class="photo-info">
                     <h3 class="photo-title">${photo.title}</h3>
                     <div class="photo-date"><i class="far fa-calendar"></i> ${photo.date}</div>
@@ -938,175 +939,24 @@
             galleryContainer.appendChild(card);
         });
 
-        // Floating Hearts
-        const heartsContainer = document.getElementById('floatingHearts');
-        
-        for (let i = 0; i < 30; i++) {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '💕';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = 10 + Math.random() * 20 + 's';
-            heart.style.animationDelay = Math.random() * 5 + 's';
-            heart.style.fontSize = 15 + Math.random() * 25 + 'px';
-            heartsContainer.appendChild(heart);
-        }
-
-        // ================== MUSIC PLAYER FIX UNTUK GITHUB ==================
-        const audio = document.getElementById('audioPlayer');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const playPauseIcon = document.getElementById('playPauseIcon');
-        const volumeBtn = document.getElementById('volumeBtn');
-        const volumeIcon = document.getElementById('volumeIcon');
-        const progressBar = document.getElementById('progressBar');
-        const progressContainer = document.getElementById('progressContainer');
-        const currentTimeEl = document.getElementById('currentTime');
-        const durationEl = document.getElementById('duration');
-        const musicToggleBtn = document.getElementById('musicToggleBtn');
-        const musicPlayer = document.getElementById('musicPlayer');
-
-        // Judul lagu
-        document.getElementById('songTitle').textContent = "Best Friend Song";
-        document.getElementById('songArtist').textContent = "For My Bestie 💕";
-
-        // State variables
-        let isPlaying = false;
-        let isMuted = false;
-        let isPlayerVisible = false;
-
-        // Fungsi untuk handle play dengan user interaction
-        function playAudio() {
-            audio.play()
-                .then(() => {
-                    playPauseIcon.classList.remove('fa-play');
-                    playPauseIcon.classList.add('fa-pause');
-                    musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                    isPlaying = true;
-                })
-                .catch(error => {
-                    console.log('Playback failed:', error);
-                    // Fallback: minta user klik sekali lagi
-                    alert('Click Play button again to start music!');
-                });
-        }
-
-        // Play/Pause button
-        playPauseBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            
-            if (isPlaying) {
-                audio.pause();
-                playPauseIcon.classList.remove('fa-pause');
-                playPauseIcon.classList.add('fa-play');
-                musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
-                isPlaying = false;
-            } else {
-                playAudio();
-            }
-        });
-
-        // Volume button
-        volumeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            isMuted = !isMuted;
-            audio.muted = isMuted;
-            volumeIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-        });
-
-        // Update progress bar
-        audio.addEventListener('timeupdate', () => {
-            if (audio.duration) {
-                const percent = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = percent + '%';
-                currentTimeEl.textContent = formatTime(audio.currentTime);
-            }
-        });
-
-        // Metadata loaded
-        audio.addEventListener('loadedmetadata', () => {
-            durationEl.textContent = formatTime(audio.duration);
-            console.log('Audio loaded, duration:', audio.duration);
-        });
-
-        // Error handling
-        audio.addEventListener('error', (e) => {
-            console.error('Audio error:', e);
-            console.log('Audio src:', audio.src);
-            alert('Error loading music file. Make sure music.mp3 exists in the same folder!');
-        });
-
-        // Click on progress bar to seek
-        progressContainer.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const width = progressContainer.clientWidth;
-            const clickX = e.offsetX;
-            const duration = audio.duration;
-            if (duration) {
-                audio.currentTime = (clickX / width) * duration;
-            }
-        });
-
-        // Auto replay when audio ends
-        audio.addEventListener('ended', () => {
-            audio.currentTime = 0;
-            if (isPlaying) {
-                playAudio();
-            }
-        });
-
-        // Toggle music player visibility
-        musicToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            isPlayerVisible = !isPlayerVisible;
-            if (isPlayerVisible) {
-                musicPlayer.classList.add('active');
-            } else {
-                musicPlayer.classList.remove('active');
-            }
-        });
-
-        // Format time helper
-        function formatTime(seconds) {
-            if (isNaN(seconds) || seconds === Infinity) return "0:00";
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        // WhatsApp Buttons
-        document.getElementById('whatsappNumberBtn').addEventListener('click', () => {
-            window.open(`https://wa.me/${whatsappData.number}?text=Halo%20bestie!%20Aku%20liat%20website%20kenangan%20kita%20💕`, '_blank');
-        });
-
-        document.getElementById('whatsappChannelBtn').addEventListener('click', () => {
-            window.open(whatsappData.channel, '_blank');
-        });
-
-        // Scroll Progress
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
-        });
-
-        // Modal
+        // ======================== MODAL (event listener setelah card dibuat) ========================
         const modal = document.getElementById('photoModal');
         const modalImage = document.getElementById('modalImage');
         const modalTitle = document.getElementById('modalTitle');
         const modalDesc = document.getElementById('modalDesc');
         const modalClose = document.getElementById('modalClose');
 
+        // Pasang event listener ke setiap photo-card
         document.querySelectorAll('.photo-card').forEach(card => {
             card.addEventListener('click', () => {
                 const img = card.querySelector('.photo-img').src;
                 const title = card.querySelector('.photo-title').textContent;
-                const date = card.querySelector('.photo-date').textContent;
+                const dateElem = card.querySelector('.photo-date').textContent;
                 const desc = card.querySelector('.photo-desc').textContent;
                 
                 modalImage.src = img;
                 modalTitle.textContent = title;
-                modalDesc.textContent = `${date} - ${desc}`;
+                modalDesc.textContent = `${dateElem} - ${desc}`;
                 modal.classList.add('active');
             });
         });
@@ -1121,16 +971,147 @@
             }
         });
 
+        // Floating Hearts
+        const heartsContainer = document.getElementById('floatingHearts');
+        for (let i = 0; i < 40; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💕';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = 10 + Math.random() * 20 + 's';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+            heartsContainer.appendChild(heart);
+        }
+
+        // ======================== MUSIC PLAYER ========================
+        const audio = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const volumeBtn = document.getElementById('volumeBtn');
+        const volumeIcon = document.getElementById('volumeIcon');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const musicPlayer = document.getElementById('musicPlayer');
+
+        let isPlaying = false;
+        let isMuted = false;
+        let isPlayerVisible = false;
+
+        function playAudio() {
+            audio.play().then(() => {
+                playPauseIcon.classList.remove('fa-play');
+                playPauseIcon.classList.add('fa-pause');
+                musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                isPlaying = true;
+            }).catch(err => {
+                console.log("Audio play error (maybe no music.mp3):", err);
+            });
+        }
+
+        playPauseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isPlaying) {
+                audio.pause();
+                playPauseIcon.classList.remove('fa-pause');
+                playPauseIcon.classList.add('fa-play');
+                musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
+                isPlaying = false;
+            } else {
+                playAudio();
+            }
+        });
+
+        volumeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMuted = !isMuted;
+            audio.muted = isMuted;
+            volumeIcon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = percent + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('error', (e) => {
+            console.log("Audio file not found or unsupported. Music won't play.");
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            if (audio.duration) {
+                audio.currentTime = (clickX / width) * audio.duration;
+            }
+        });
+
+        audio.addEventListener('ended', () => {
+            if (isPlaying) {
+                audio.currentTime = 0;
+                playAudio();
+            }
+        });
+
+        musicToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isPlayerVisible = !isPlayerVisible;
+            if (isPlayerVisible) {
+                musicPlayer.classList.add('active');
+            } else {
+                musicPlayer.classList.remove('active');
+            }
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds === Infinity) return "0:00";
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // WhatsApp Buttons
+        document.getElementById('whatsappNumberBtn').addEventListener('click', () => {
+            window.open(`https://wa.me/${whatsappData.number}?text=Halo%20bestie!%20Aku%20liat%20website%20kenangan%20kita%20💕`, '_blank');
+        });
+        document.getElementById('whatsappChannelBtn').addEventListener('click', () => {
+            window.open(whatsappData.channel, '_blank');
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
         // Auto show music player after 2 seconds
         setTimeout(() => {
             musicPlayer.classList.add('active');
             isPlayerVisible = true;
         }, 2000);
 
-        // Cek apakah audio bisa dimuat
-        window.addEventListener('load', () => {
-            console.log('Page loaded, audio src:', audio.src);
-            audio.load(); // Reload audio
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
     </script>
 </body>
